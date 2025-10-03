@@ -1,0 +1,34 @@
+Question:
+Validate email addresses.
+Conditions: must contain @ and ., no spaces, only alphanumeric/underscore/dot before @.
+
+Code:
+
+
+import re
+email = input("Enter email: ")
+pattern = r'^[A-Za-z0-9._]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$'
+if re.match(pattern, email):
+    print("Valid Email")
+else:
+    print("Invalid Email")
+
+
+Input 1:
+
+test.email_123@gmail.com
+
+
+Output 1:
+
+Valid Email
+
+
+Input 2:
+
+wrong email@com
+
+
+Output 2:
+
+Invalid Email
