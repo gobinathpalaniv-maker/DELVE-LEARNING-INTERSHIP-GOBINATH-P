@@ -1,0 +1,38 @@
+Question:
+Write a program to compute net amount from a transaction log.
+Format:
+
+D 100 (Deposit)
+
+W 200 (Withdraw)
+
+Code:
+
+# Q7: Bank Account Log
+balance = 0
+while True:
+    try:
+        line = input()
+        if not line: break
+        cmd, val = line.split()
+        val = int(val)
+        if cmd == "D":
+            balance += val
+        elif cmd == "W":
+            balance -= val
+    except:
+        break
+print(balance)
+
+
+Input:
+
+D 300
+D 300
+W 200
+D 100
+
+
+Output:
+
+500
