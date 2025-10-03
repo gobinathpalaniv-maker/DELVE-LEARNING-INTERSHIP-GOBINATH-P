@@ -1,0 +1,36 @@
+Question:
+Find pairs of alphabets in an alphanumeric string where the sum of digits in between = 9.
+
+Code:
+
+# Q12: Pairs with Sum = 9
+import re
+s = input("Enter string: ")
+for m in re.finditer(r'([a-z])(\d+)([a-z])', s):
+    if sum(map(int, m.group(2))) == 9:
+        print(m.group(1) + "," + m.group(3))
+
+
+Input 1:
+
+a54b12c
+
+
+Output 1:
+
+a,b
+
+
+Input 2:
+
+a55b234cd9f63de54x3m
+
+
+Output 2:
+
+b,c
+b,d
+d,f
+f,d
+f,e
+e,x
