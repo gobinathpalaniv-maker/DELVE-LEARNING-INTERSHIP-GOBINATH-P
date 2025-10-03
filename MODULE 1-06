@@ -1,0 +1,22 @@
+Question:
+Write a program that accepts a sentence and calculates the number of uppercase and lowercase letters.
+
+Code:
+
+# Q6: Count Upper and Lower Case
+s = input("Enter string: ")
+upper = sum(c.isupper() for c in s)
+lower = sum(c.islower() for c in s)
+print("UPPER CASE", upper)
+print("LOWER CASE", lower)
+
+
+Input:
+
+Hello world!
+
+
+Output:
+
+UPPER CASE 1
+LOWER CASE 9
