@@ -1,0 +1,34 @@
+Question:
+Check whether a given number is an Armstrong number or not.
+(Armstrong: Sum of each digit raised to the power of number of digits = number itself)
+
+Code:
+
+num = int(input("Enter number: "))
+power = len(str(num))
+total = sum(int(digit) ** power for digit in str(num))
+
+if total == num:
+    print("Armstrong number")
+else:
+    print("Not an Armstrong number")
+
+
+Input 1:
+
+1634
+
+
+Output 1:
+
+Armstrong number
+
+
+Input 2:
+
+123
+
+
+Output 2:
+
+Not an Armstrong number
