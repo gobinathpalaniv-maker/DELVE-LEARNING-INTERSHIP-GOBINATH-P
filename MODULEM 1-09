@@ -1,0 +1,29 @@
+Question:
+Sort a list of tuples (name, age, height) by name > age > height.
+
+Code:
+
+# Q9: Sort Tuples
+data = []
+while True:
+    try:
+        s = input()
+        if not s: break
+        data.append(tuple(s.split(",")))
+    except: break
+
+data.sort(key=lambda x: (x[0], int(x[1]), int(x[2])))
+print(data)
+
+
+Input:
+
+Tom,19,80
+John,20,90
+Jony,17,91
+Jony,17,93
+Json,21,85
+
+
+Output:
+[('John', '20', '90'), ('Jony', '17', '91'), ('Jony', '17', '93'), ('Json', '21', '85'), ('Tom', '19', '80')]
