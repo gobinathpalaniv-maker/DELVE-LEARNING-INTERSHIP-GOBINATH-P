@@ -1,0 +1,21 @@
+Question:
+Rotate a list to the right by k steps.
+
+Code:
+
+arr = list(map(int, input("Enter list: ").split()))
+k = int(input("Enter k: "))
+k %= len(arr)
+rotated = arr[-k:] + arr[:-k]
+print("Rotated:", rotated)
+
+
+Input:
+
+Enter list: 1 2 3 4 5
+Enter k: 2
+
+
+Output:
+
+Rotated: [4, 5, 1, 2, 3]
