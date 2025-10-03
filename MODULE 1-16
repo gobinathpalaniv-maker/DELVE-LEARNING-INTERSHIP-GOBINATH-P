@@ -1,0 +1,36 @@
+Question:
+Write a program to simulate Stone–Paper–Scissor game.
+
+Rules:
+
+Stone beats Scissor
+
+Scissor beats Paper
+
+
+
+Code:
+
+
+import random
+
+choices = ["stone", "paper", "scissor"]
+user = input("Enter your choice (stone/paper/scissor): ").lower()
+comp = random.choice(choices)
+print("Computer:", comp)
+
+if user == comp:
+    print("Result: Draw")
+elif (user == "stone" and comp == "scissor") or \
+     (user == "scissor" and comp == "paper") or \
+     (user == "paper" and comp == "stone"):
+    print("Result: You Win!")
+else:
+    print("Result: You Lose!")
+
+
+Sample Input / Output:
+
+Enter your choice (stone/paper/scissor): stone
+Computer: scissor
+Result: You Win!
