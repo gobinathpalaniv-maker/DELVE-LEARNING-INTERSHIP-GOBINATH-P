@@ -1,0 +1,19 @@
+
+
+Question:
+Write a program that accepts whitespace separated words as input, removes duplicates, and sorts them alphanumerically.
+
+Code:
+
+words = input("Enter words: ").split()
+print(" ".join(sorted(set(words))))
+
+
+Input:
+
+hello world and practice makes perfect and hello world again
+
+
+Output:
+
+again and hello makes perfect practice world
