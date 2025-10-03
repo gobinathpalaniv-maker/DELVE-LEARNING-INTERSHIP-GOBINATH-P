@@ -1,0 +1,33 @@
+Question:
+Find number of pairs in a binary number that start and end with 1.
+
+Code:
+
+# Q13: Binary Pairs Starting and Ending with 1
+s = input("Enter binary string: ")
+ones = [i for i, ch in enumerate(s) if ch == "1"]
+count = 0
+for i in range(len(ones)):
+    for j in range(i+1, len(ones)):
+        count += 1
+print(count)
+
+
+Input 1:
+
+100101
+
+
+Output 1:
+
+2
+
+
+Input 2:
+
+1001101010010
+
+
+Output 2:
+
+15
