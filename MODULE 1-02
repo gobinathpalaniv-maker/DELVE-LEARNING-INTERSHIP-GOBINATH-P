@@ -1,0 +1,17 @@
+Question:
+Write a program that accepts a comma separated sequence of words as input and prints them sorted alphabetically.
+
+Code:
+
+words = input("Enter words: ").split(",")
+print(",".join(sorted(words)))
+
+
+Input:
+
+without,hello,bag,world
+
+
+Output:
+
+bag,hello,without,world
