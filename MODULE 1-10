@@ -1,0 +1,34 @@
+Question:
+A robot moves UP, DOWN, LEFT, RIGHT. Compute final distance from origin (rounded).
+
+Code:
+
+# Q10: Robot Movement
+import math
+x = y = 0
+while True:
+    try:
+        s = input()
+        if not s: break
+        direction, steps = s.split()
+        steps = int(steps)
+        if direction == "UP": y += steps
+        elif direction == "DOWN": y -= steps
+        elif direction == "LEFT": x -= steps
+        elif direction == "RIGHT": x += steps
+    except: break
+dist = round(math.sqrt(x**2 + y**2))
+print(dist)
+
+
+Input:
+
+UP 5
+DOWN 3
+LEFT 3
+RIGHT 2
+
+
+Output:
+
+2
